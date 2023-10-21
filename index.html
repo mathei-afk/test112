@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Dashboard</title>
+    <style>
+        /* Stilurile pentru containerul principal */
+        body {
+            text-align: center;
+            font-family: Arial, sans-serif;
+            background-image: url('pink-and-cyan-background-wallpaper-preview.jpg');
+            background-size: cover;
+            background-repeat: no-repeat;
+            background-attachment: fixed;
+        }
+
+        /* Stilurile pentru titlu */
+        h2 {
+            font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+            color: #fff;
+        }
+
+        /* Stilurile CSS pentru containerul butoanelor */
+        .button-container {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            height: 80vh; /* Ajustați înălțimea containerului principal după necesități */
+        }
+
+        /* Stilurile pentru butoane */
+        .button-container button {
+            margin-bottom: 20px;
+            padding: 10px 20px;
+            font-size: 16px;
+            background-color: rgba(255, 255, 255, 0.7);
+            color: #3498db;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            overflow: hidden;
+            transition: background-color 0.3s ease-in-out, color 0.3s ease-in-out;
+        }
+
+        /* Stilurile pentru butoanele specifice */
+        #proiecteClasaButton {
+            background-color: rgba(255, 255, 255, 0.7);
+            color: #3498db;
+        }
+
+        #proiecteleMeleButton {
+            background-color: rgba(255, 255, 255, 0.7);
+            color: #e74c3c;
+        }
+
+        #siteRomanaButton {
+            background-color: rgba(255, 255, 255, 0.7);
+            color: #2ecc71;
+        }
+
+        #siteIstorieButton {
+            background-color: rgba(255, 255, 255, 0.7);
+            color: #f1c40f;
+        }
+
+        /* Stiluri pentru hover la butoane */
+        .button-container button:hover {
+            background-color: #3498db;
+            color: #fff;
+        }
+
+        /* Stilurile pentru animația de undă */
+        .button-container button .ripple {
+            position: absolute;
+            border-radius: 50%;
+            background: rgba(255, 255, 255, 0.7);
+            transform: scale(0);
+            animation: ripple 0.6s linear;
+        }
+
+        @keyframes ripple {
+            to {
+                transform: scale(4);
+                opacity: 0;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Titlu centrat -->
+    <h2>Dashboard</h2>
+
+    <!-- Container pentru butoane centrate vertical și orizontal -->
+    <div class="button-container">
+        <!-- Buton pentru "Proiecte de Clasă" -->
+        <button id="proiecteClasaButton">Proiecte de Clasă<span class="ripple"></span></button>
+
+        <!-- Buton pentru "Proiectele Mele" -->
+        <button id="proiecteleMeleButton">Proiectele Mele<span class="ripple"></span></button>
+
+        <!-- Buton pentru "Site Română" -->
+        <button id="siteRomanaButton">Site Română<span class="ripple"></span></button>
+
+        <!-- Buton pentru "Site Istorie" -->
+        <button id="siteIstorieButton">Site Istorie<span class="ripple"></span></button>
+    </div>
+
+    <script>
+        // Adăugați redirecționarea la pagini când butoanele sunt apăsate
+        document.getElementById("proiecteClasaButton").addEventListener("click", function() {
+            window.location.href = "proiecte-clasa.html";
+        });
+
+        document.getElementById("proiecteleMeleButton").addEventListener("click", function() {
+            window.location.href = "proiectele-mele.html";
+        });
+
+        document.getElementById("siteRomanaButton").addEventListener("click", function() {
+            window.location.href = "site-romana.html";
+        });
+
+        document.getElementById("siteIstorieButton").addEventListener("click", function() {
+            window.location.href = "site-istorie.html";
+        });
+    </script>
+</body>
+</html>
